@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Eh apa nih?</title>
+
+<!-- Font: Dancing Script untuk aksen romantis, Poppins untuk teks isi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- lapisan emot love kelap-kelip di background, diisi otomatis lewat JS -->
+  <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+  <main class="stage">
+    <div class="book-wrap">
+      <div class="book" id="book"></div>
+      <div class="flip-zone left" id="zoneLeft"></div>
+      <div class="flip-zone right" id="zoneRight"></div>
+    </div>
+
+    <p class="hint" id="hint">Ketuk sisi buku untuk membuka</p>
+  </main>
+
+  <!-- library flipbook -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
