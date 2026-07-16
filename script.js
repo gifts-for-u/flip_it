@@ -85,7 +85,7 @@ function initFlipbook(){
     showCover: true,
     mobileScrollSupport: false,
     useMouseEvents: true,
-    usePortrait: false, // ponytail: spread mode selalu aktif biar halaman yg udah diflip tetap kelihatan di kiri
+    usePortrait: true, // biarkan mobile memakai mode portrait supaya buku tetap penuh dan terpusat
     swipeDistance: 25,
     flippingTime: 700
   });

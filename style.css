@@ -207,6 +207,20 @@ body{
 
 /* ---------- responsif ---------- */
 @media (max-width: 480px){
+  .stage{
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .book-wrap{
+    width: min(92vw, 360px);
+    aspect-ratio: 17 / 24; /* rasio 1 halaman saat PageFlip masuk mode portrait di mobile */
+  }
+
+  .page .page-content{
+    padding: 26px 22px;
+  }
+
   .hint{ font-size: 18px; }
   .book-title{ font-size: 32px; }
   .msg-text{ font-size: 15px; }
