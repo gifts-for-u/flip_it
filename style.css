@@ -207,8 +207,90 @@ body{
 
 /* ---------- responsif ---------- */
 @media (max-width: 480px){
-  .hint{ font-size: 18px; }
-  .book-title{ font-size: 32px; }
-  .msg-text{ font-size: 15px; }
-  .seal{ width: 60px; height: 60px; font-size: 24px; }
+  html, body{
+    min-height: 100dvh;
+  }
+
+  .stage{
+    height: 100dvh;
+    padding: clamp(14px, 4vw, 20px);
+    gap: clamp(10px, 3vw, 14px);
+  }
+
+  .book-wrap{
+    width: min(92vw, 380px);
+    max-height: calc(100dvh - 70px);
+    aspect-ratio: 17 / 24; /* rasio 1 halaman saat PageFlip masuk mode portrait di mobile */
+  }
+
+  .page .page-content{
+    padding: clamp(22px, 7vw, 30px) clamp(18px, 6vw, 24px);
+  }
+
+  .seal{
+    width: clamp(56px, 16vw, 68px);
+    height: clamp(56px, 16vw, 68px);
+    font-size: clamp(22px, 7vw, 28px);
+    margin-bottom: clamp(14px, 4vw, 18px);
+  }
+
+  .book-title{
+    font-size: clamp(31px, 10vw, 38px);
+    margin-bottom: clamp(6px, 2vw, 8px);
+  }
+
+  .book-subtitle{
+    max-width: 25ch;
+    font-size: clamp(11px, 3.5vw, 13px);
+    line-height: 1.75;
+    letter-spacing: clamp(2px, 0.75vw, 3px);
+  }
+
+  .closing-name{
+    max-width: 15ch;
+    font-size: clamp(27px, 8.5vw, 34px);
+    line-height: 1.35;
+    margin-top: clamp(14px, 4vw, 18px);
+  }
+
+  .msg-mark{
+    font-size: clamp(18px, 5vw, 20px);
+    margin-bottom: clamp(8px, 3vw, 10px);
+  }
+
+  .msg-text{
+    max-width: 27ch;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .page-number{
+    bottom: 12px;
+    font-size: 11px;
+  }
+
+  .hint{
+    font-size: clamp(17px, 5vw, 19px);
+  }
+}
+
+@media (max-width: 360px), (max-height: 640px){
+  .book-wrap{
+    width: min(88vw, 330px);
+    max-height: calc(100dvh - 58px);
+  }
+
+  .page .page-content{
+    padding: 20px 16px;
+  }
+
+  .book-subtitle{
+    max-width: 23ch;
+    line-height: 1.65;
+  }
+
+  .closing-name{
+    max-width: 14ch;
+  }
 }
